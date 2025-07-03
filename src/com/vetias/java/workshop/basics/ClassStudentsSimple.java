@@ -14,9 +14,9 @@ public class ClassStudentsSimple {
         for (int i = 0; i < count; i++) {
             System.out.print("Enter Roll No and Name for student " + (i + 1) + " (e.g., 101 John): ");
             String line = scanner.nextLine();
-            String[] parts = line.split(" ", 2); // Split by first space
+            String[] parts = line.split(" ", 2);
             students[i][0] = parts[0];
-            students[i][1] = parts.length > 1 ? parts[1] : ""; // Handle cases where only roll no is entered
+            students[i][1] = parts.length > 1 ? parts[1] : ""; 
         }
 
         System.out.println("\n--- Student List ---");
