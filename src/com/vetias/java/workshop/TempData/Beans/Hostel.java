@@ -1,24 +1,31 @@
-package vetias.java.workshop.TempData.Beans;
-
 public class Hostel extends Building {
+    private int numberOfRooms;
+    private boolean isMessOpen;
 
-    private String hostelName;
-    private int numberOfFloors;
-
-    public String getHostelName() {
-        return hostelName;
+    public Hostel(int numberOfRooms, boolean isMessOpen) {
+        this.numberOfRooms = numberOfRooms;
+        this.isMessOpen = isMessOpen;
     }
 
-    public void setHostelName(String aHostelName) {
-        this.hostelName = aHostelName;
+    public int getNumberOfRooms() {
+        return numberOfRooms;
     }
 
-    public int getNumberOfFloors() {
-        return numberOfFloors;
+    public boolean isMessOpen() {
+        return isMessOpen;
     }
 
-    public void setNumberOfFloors(int aNumberOfFloors) {
-        this.numberOfFloors = aNumberOfFloors;
+    public void setNumberOfRooms(int numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
     }
 
+    public void setMessOpen(boolean messOpen) {
+        isMessOpen = messOpen;
+    }
+
+    public void displayHostelInfo() {
+        super.PrintDetails();
+        System.out.println("Number of Rooms: " + numberOfRooms);
+        System.out.println("Is Mess Open: " + (isMessOpen ? "Yes" : "No"));
+    }
 }

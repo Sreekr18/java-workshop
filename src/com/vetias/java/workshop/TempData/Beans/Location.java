@@ -1,60 +1,61 @@
-package vetias.java.workshop.TempData.Beans;
-
 public class Location {
     private String name;
-    private String latitude;
-    private String longitude;
-    private String description;
-    private String address;
-    private String city;
+    private double latitude;
+    private double longitude;
     private String address;
     private String postalCode;
-   
+    private String contact;
+
+    public Location(String name, double latitude, double longitude, String address, String postalCode, String contact) {
+        this.name = setName(name);
+        this.latitude = setLatitude(latitude);
+        this.longitude = setLongitude(longitude);
+        this.address = setAddress(address);
+        this.postalCode = setPostalCode(postalCode);
+        this.contact = setContact(contact);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String 
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
     
-    public String getName() { 
-        return name; 
-    }
-    public void setName(String aName) { 
-        name = aName; 
-    }
-    public String getLatitude() { 
-        return latitude; 
-    }
-    public void setLatitude(String aLatitude) { 
-        latitude = aLatitude; 
-    }
-    public String getLongitude() { 
-        return longitude; 
-    }
-    public void setLongitude(String aLongitude) { 
-        longitude = aLongitude; 
-    }
-    public String getDescription() { 
-        return description; 
-    }
-    public void setDescription(String aDescription) { 
-        description = aDescription; 
-    }
-    public String getAddress() { 
-        return address; 
-    }
-    public void setAddress(String aAddress) { 
-        address = aAddress; 
-    }
-    public String getCity() { 
-        return city; 
-    }
-    public void setCity(String aCity) { 
-        city = aCity; 
-    }
-    public String getPostalCode() { 
-        return postalCode; 
-    }
-    public void setPostalCode(String aPostalCode) { 
-        postalCode = aPostalCode; 
-    }
-
-
-
-  } 
-
+}

@@ -1,20 +1,25 @@
-package vetias.java.workshop.TempData.Beans;
+public class Floor{
+    private int floorName;
+    private double number;
 
-public class Floor {
-    private int floorNumber;
-    private String floorName;
-    public int getFloorNumber() {
-        return floorNumber;
+    public Floor(int floorName, double number) {
+        this.floorName = floorName;
+        this.number = number;
     }
-    public void setFloorNumber(int aFloorNumber) {
-        floorNumber = aFloorNumber;
-    }
-    public String getFloorName() {
+
+    public int getFloorName() {
         return floorName;
     }
-    public void setFloorName(String aFloorName) {
-        floorName = aFloorName;
+
+    public double getNumber() {
+        return number;
     }
 
-    
+    public void setFloorName(int floorName) {
+        this.floorName = floorName;
+    }
+
+    public void setNumber(double number) {
+        this.number = number;
+    }
 }
