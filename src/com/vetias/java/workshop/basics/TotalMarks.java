@@ -1,4 +1,5 @@
-package vetias.java;
+package vetias.java.workshop.basics;
+
 public class TotalMarks {
     public static void main(String[] args) {
         int[] marks = {85, 90, 78, 92, 88};
