@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class EmployeeDetailsArray {
     public static void main(String[] args) {
         String[][] employees=new String[5][2];
@@ -13,7 +15,7 @@ public class EmployeeDetailsArray {
         employees[4][1] = "Suresh";
         System.out.println("Employee Details:");
         for (String[] employee : employees) {
-            System.out.println("Salary: " + employees[i][0] + ", Name: " + employees[i][1]);
+            System.out.println(Arrays.toString(employee));
         }
 
     }
