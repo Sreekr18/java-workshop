@@ -57,5 +57,17 @@ public class Location {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+    @Override
+    public String toString() {      
+        return "Location{" +
+                "name='" + name + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", address='" + address + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", contact='" + contact + '\'' +
+                '}';
+    }
     
 }
