@@ -3,7 +3,7 @@ public class EmployeeDetailsArray {
         String[][] employees=new String[5][2];
         employees[0][0] = "Rs.50000";
         employees[0][1] = "Anand";
-        employees[1][0] = "Rs.60000";
+        employees[1][0] = "Rs.66000";
         employees[1][1] = "Bharat";
         employees[2][0] = "Rs.70000";
         employees[2][1] = "Ram";
@@ -12,7 +12,7 @@ public class EmployeeDetailsArray {
         employees[4][0] = "Rs.83000";
         employees[4][1] = "Suresh";
         System.out.println("Employee Details:");
-        for (int i = 0; i < employees.length; i++) {
+        for (String[] employee : employees) {
             System.out.println("Salary: " + employees[i][0] + ", Name: " + employees[i][1]);
         }
 
