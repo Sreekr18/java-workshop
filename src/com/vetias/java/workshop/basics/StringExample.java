@@ -10,6 +10,9 @@ public class StringExample {
        
         String Sentence="This program shows how can we split a string into multiple strings";
         String[] words = Sentence.split(" "); 
+        for (String word : words) {
+            System.out.println(word);
+        }
         
        
         System.out.println(words.length);
