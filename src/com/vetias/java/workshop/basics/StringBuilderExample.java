@@ -6,9 +6,9 @@ public class StringBuilderExample {
         sb.append("Java ");
         sb.append("is ");
         sb.append("the ");
-        sb.append("most");
+        sb.append("most ");
         sb.append("used ");
-        sb.append("language");
+        sb.append("language ");
         sb.append("for ");
         sb.append("Enterprise ");
         sb.append("Applications");
