@@ -14,8 +14,8 @@ public class StringExample {
             System.out.println(word);
         }
         
-        int wordCount = words.length;
-        System.out.println("Number of words: " + wordCount);
+       
+        System.out.println(words.length);
 
         
     
