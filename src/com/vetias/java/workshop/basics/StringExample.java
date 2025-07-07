@@ -7,7 +7,16 @@ public class StringExample {
         System.out.println("Concatenated String: " + FinalName);
         String UpperCase = FinalName.toUpperCase();
         System.out.println("Uppercase String: " +UpperCase);
+       
+        String Sentence="This program shows how can we split a string into multiple strings";
+        String[] words = Sentence.split(" "); 
+        for (String word : words) {
+            System.out.println(word);
+        }
         
+        int wordCount = words.length;
+        System.out.println("Number of words: " + wordCount);
+
         
     
 }
