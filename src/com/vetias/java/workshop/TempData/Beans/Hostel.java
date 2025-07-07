@@ -1,31 +1,37 @@
 public class Hostel extends Building {
-    private int numberOfRooms;
-    private boolean isMessOpen;
+    private boolean isMessavailable;
+    private int Roomsavailable;
 
-    public Hostel(int numberOfRooms, boolean isMessOpen) {
-        this.numberOfRooms = numberOfRooms;
-        this.isMessOpen = isMessOpen;
+    public void setMessavailable(boolean aisMessavailable) {
+        isMessavailable = aisMessavailable;
+    }
+    public boolean getMessavailable(){
+        return isMessavailable;
+    }
+    public int getIsRoomsavailable() {
+        return Roomsavailable;
+    }
+    public void setIsRoomsavailable(int isRoomsavailable) {
+        this.Roomsavailable = isRoomsavailable;
+    }
+    
+    @Override
+    public String toString() {
+        return "Hostel{" +
+                "isMessavailable=" + isMessavailable +
+                ", Roomsavailable=" + Roomsavailable +
+                "} " + super.toString();
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hostel)) return false;
+        if (!super.equals(o)) return false;
+        Hostel hostel = (Hostel) o;
+        return isMessavailable == hostel.isMessavailable &&
+                Roomsavailable == hostel.Roomsavailable;
     }
 
-    public boolean isMessOpen() {
-        return isMessOpen;
-    }
 
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
-    }
-
-    public void setMessOpen(boolean messOpen) {
-        isMessOpen = messOpen;
-    }
-
-    public void displayHostelInfo() {
-        super.PrintDetails();
-        System.out.println("Number of Rooms: " + numberOfRooms);
-        System.out.println("Is Mess Open: " + (isMessOpen ? "Yes" : "No"));
-    }
 }

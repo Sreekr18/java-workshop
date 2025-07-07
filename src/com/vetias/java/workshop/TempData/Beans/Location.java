@@ -1,78 +1,127 @@
-public class Location {
-    public static void main(String[] args) {
-        
-    Location location = new Location("Vet Tindhl", 40.785091, -73.968285, "Erode", "10024", "123-456-7890");
-        System.out.println(location);
-    }
+public class Location 
+{
+  
     private String name;
-    private double latitude;
-    private double longitude;
+    private double alatitude;
+    private double alongitude;
+    private String description;
+    private String country;
+    private String city;
     private String address;
-    private String postalCode;
-    private String contact;
+    private String Postalcode;
+    private String Building[] buildings;
 
-    public Location(String name, double latitude, double longitude, String address, String postalCode, String contact) {
+
+    public Location(String name, double alatitude, double alongitude, String description, String country, String city, String address, String postalcode) {
         this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.alatitude = alatitude;
+        this.alongitude = alongitude; 
+        this.description = description;
+        this.country = country;
+        this.city = city;
         this.address = address;
-        this.postalCode = postalCode;
-        this.contact = contact;
+        this.Postalcode = postalcode;
+    
     }
-
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
+    public double getAlatitude() 
+    {
+        return alatitude;
     }
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
+    public void setAlatitude(double alatitude) 
+    {
+        this.alatitude = alatitude;
     }
-    public void setAddress(String address) {
+    public double getAlongitude() 
+    {
+        return alongitude;
+    }
+    public void setAlongitude(double alongitude) 
+    {
+        this.alongitude = alongitude;
+    }
+    public String getDescription() 
+    {
+        return description;
+    }
+    public void setDescription(String description) 
+    {
+        this.description = description;
+    }
+    public String getCountry() 
+    {
+        return country;
+    }
+    public void setCountry(String country) 
+    {
+        this.country = country;
+    }
+    public String getCity() 
+    {
+        return city;
+    }
+    public void setCity(String city) 
+    {
+        this.city = city;
+    }
+    public String getAddress() 
+    {
+        return address;
+    }
+    public void setAddress(String address) 
+    {
         this.address = address;
     }
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public String getPostalcode() 
+    {
+        return Postalcode;
     }
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setPostalcode(String postalcode) 
+    {
+        Postalcode = postalcode;
     }
+    public boolean equals (Object obj) 
+    {
+        if(this==obj)
+        {
+            return true;
 
+        }
+        if(obj==null || getClass()!=obj.getClass())
+        {
+            return false;
+        }
+        Location location = (Location) obj;
+        return this.name.equals(location.name) &&
+               this.alatitude == location.alatitude &&
+               this.alongitude == location.alongitude &&
+               this.description.equals(location.description) &&
+               this.country.equals(location.country) &&
+               this.city.equals(location.city) &&
+               this.address.equals(location.address) &&
+               this.Postalcode.equals(location.Postalcode);
+    }  
+    
+   public void setBuilding(String[] buildings) 
+   {
+            this.Building = buildings;
+    }
     @Override
-    public String toString() {      
-        return "Location{" +
-                "name='" + name + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", address='" + address + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                ", contact='" + contact + '\'' +
-                '}';
+    public String toString() 
+    {
+      return "location{name:" + name + " latitude:" + alatitude + " longitude:" + alongitude + " description:" + description
+        + " country:" + country + " city:" + city + " address:" + address + " postalcode:" + Postalcode +
+        "}";
     }
     
+    
+   
+ 
 }

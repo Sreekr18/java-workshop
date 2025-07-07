@@ -1,55 +1,67 @@
-public class Zone{
+public class Zone {
     private String name;
-    private String ZoneID;
+    private int zoneId;
     private String Type;
     private double area;
-    private String description;
+    private int Sensor[] sensor;
 
-    public Zone(String name, String zoneID, String type, double area, String description) {
+    public Zone(String name, int zoneId, String type, double area) {
         this.name = name;
-        this.zoneID = zoneID;
-        this.type = type;
+        this.zoneId = zoneId;
+        Type = type;
         this.area = area;
-        this.description = description;
     }
-
     public String getName() {
         return name;
     }
-
-    public String getZoneID() {
-        return zoneID;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
-
-    public void setZoneID(String zoneID) {
-        this.zoneID = zoneID;
+    public int getZoneId() {
+        return zoneId;
     }
-
+    public void setZoneId(int zoneId) {
+        this.zoneId = zoneId;
+    }
+    public String getType() {
+        return Type;
+    }
     public void setType(String type) {
-        this.type = type;
+        Type = type;
     }
-
+    public double getArea() {
+        return area;
+    }
     public void setArea(double area) {
         this.area = area;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSensor(int sensor)
+    {
+        this.Sensor=Sensor;
+        
     }
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "name='" + name + '\'' +
+                ", zoneId=" + zoneId +
+                ", Type='" + Type + '\'' +
+                ", area=" + area +
+                ", Sensor=" + java.util.Arrays.toString(Sensor) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Zone zone = (Zone) o;
+        return zoneId == zone.zoneId &&
+                Double.compare(zone.area, area) == 0 &&
+                java.util.Objects.equals(name, zone.name) &&
+                java.util.Objects.equals(Type, zone.Type) &&
+                java.util.Arrays.equals(Sensor, zone.Sensor);
+    }
+    
+    
 }

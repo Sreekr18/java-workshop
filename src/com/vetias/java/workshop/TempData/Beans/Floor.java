@@ -1,25 +1,48 @@
-public class Floor{
-    private int floorName;
-    private double number;
+public class Floor {
+    private String name;
+    private int number;
+    private int[] Zone zone;
 
-    public Floor(int floorName, double number) {
-        this.floorName = floorName;
+    public Floor(String name, int number) {
+        this.name = name;
         this.number = number;
     }
-
-    public int getFloorName() {
-        return floorName;
+    public String getName() {
+        return name;
     }
-
-    public double getNumber() {
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getNumber() {
         return number;
     }
-
-    public void setFloorName(int floorName) {
-        this.floorName = floorName;
-    }
-
-    public void setNumber(double number) {
+    public void setNumber(int number) {
         this.number = number;
     }
+   
+    public void setZone(Zone[] zone) {
+        this.Zone = zone;
+    }
+    @Override
+    public String toString() {
+        return "Floors{" +
+                "name='" + name + '\'' +
+                ", number=" + number +
+                ", zone=" + java.util.Arrays.toString(zone) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Floors floors = (Floors) o;
+        return number == floors.number &&
+                java.util.Objects.equals(name, floors.name) &&
+                java.util.Arrays.equals(zone, floors.zone);
+    }
+    
+
+    
+    
 }
