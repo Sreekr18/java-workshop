@@ -13,6 +13,6 @@ public class StringBuilderExample {
         sb.append("Enterprise ");
         sb.append("Applications");
         System.out.println(sb.toString());
-    
+       
 }
 }      
