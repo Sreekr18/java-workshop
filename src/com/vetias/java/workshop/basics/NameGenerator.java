@@ -14,12 +14,15 @@ public class NameGenerator {
             
         }
         else if ("female".equalsIgnoreCase(gender)) {
-            System.out.println("Ms. " + name +  qualiification);
+            System.out.println("Ms. " + name +  "\t" +qualiification);
         }
         else {
             System.out.println("error: Invalid");
             
         }
+        
+        
+
 
 
 
