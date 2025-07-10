@@ -8,6 +8,7 @@ public class NameGenerator {
         String gender = scanner.next();
         System.out.println("Enter your qualiification");
         String qualiification=scanner.next();
+        scanner.close();
 
         if ("male".equalsIgnoreCase (gender)) {
             System.out.println("Mr. " + name +  qualiification);

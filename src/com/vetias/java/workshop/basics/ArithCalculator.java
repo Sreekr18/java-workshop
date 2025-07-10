@@ -1,7 +1,9 @@
 
 
 public class ArithCalculator {
-    int a=3,b=0;{
+ 
+    public static void main(String[] args) {
+           int a=3,b=0;{
 
     
      try{
@@ -16,8 +18,7 @@ public class ArithCalculator {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(ArithCalculator.add(a+b));
+        System.out.println(a+b);
         System.out.println(a*b);
         System.out.println(a/b);
         

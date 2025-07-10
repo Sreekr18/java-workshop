@@ -1,4 +1,4 @@
-package vetias.java.workshop.basics;
+
 
 public class TotalMarks {
     public static void main(String[] args) {
