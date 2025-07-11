@@ -19,5 +19,7 @@ public class StudentsMarkList {
        System.out.println(Marks);
        Collections.min(Marks);
        System.out.println("max mark "+Collections.max(Marks));
-}
+
+
+    }
 }
