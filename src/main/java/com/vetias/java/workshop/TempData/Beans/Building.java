@@ -5,48 +5,58 @@ import java.time.LocalDateTime;
 public class Building {
     private String name;
     private double area;
-    private  int floors;
-    private LocalDateTime opendatetime;
-    private LocalDateTime closedatetime;
-    public void setName(String aName){
-        name=aName;
+    private int floors;
+    private LocalDateTime openDateTime;
+    private LocalDateTime closeDateTime;
 
+    public Building(String name, double area, int floors, LocalDateTime openDateTime, LocalDateTime closeDateTime) {
+        this.name = name;
+        this.area = area;
+        this.floors = floors;
+        this.openDateTime = openDateTime;
+        this.closeDateTime = closeDateTime;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
-    public void setArea(double aArea){
-        area=aArea;
-
+    public void setName(String name) {
+        this.name = name;
     }
-    public double getArea()
-    {
+
+    public double getArea() {
         return area;
     }
-    public void setFloors(int aFloors){
-        floors=aFloors;
-
+    public void setArea(double area) {
+        this.area = area;
     }
-    public int getFloors(){
+
+    public int getFloors() {
         return floors;
     }
-    public void setOpenDateTime(LocalDateTime aOpDateTime){
-        opendatetime=aOpDateTime;
-
-    }
-    public LocalDateTime getaOpDateTime(){
-        return opendatetime;
-    }
-    public void setCloseDateTime(LocalDateTime aCloseDateTime){
-        closedatetime=aCloseDateTime;
-
-    }
-    public LocalDateTime getaCloseDateTime(){
-        return closedatetime;
+    public void setFloors(int floors) {
+        this.floors = floors;
     }
 
+    public LocalDateTime getOpenDateTime() {
+        return openDateTime;
+    }
+    public void setOpenDateTime(LocalDateTime openDateTime) {
+        this.openDateTime = openDateTime;
+    }
 
-    
-    
+    public LocalDateTime getCloseDateTime() {
+        return closeDateTime;
+    }
+    public void setCloseDateTime(LocalDateTime closeDateTime) {
+        this.closeDateTime = closeDateTime;
+    }
+
+    public void printDetails() {
+        System.out.println("Building Name: " + name);
+        System.out.println("Area: " + area + " sq.m");
+        System.out.println("Number of Floors: " + floors);
+        System.out.println("Open Time: " + openDateTime);
+        System.out.println("Close Time: " + closeDateTime);
+    }
 }
