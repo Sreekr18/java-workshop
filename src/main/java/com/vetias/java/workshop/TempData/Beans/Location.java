@@ -1,124 +1,109 @@
-package com.vetias.java.workshop.TempData.Beans;
-public class Location 
-{
-  
+package com.vetias.java.workshop.tempdata.beans;
+import java.io.Serializable;
+
+public class Location implements Serializable {
     private String name;
-    private double alatitude;
-    private double alongitude;
+    private double latitude;
+    private double longitude;
     private String description;
     private String country;
     private String city;
     private String address;
-    private String Postalcode;
-    public Location(String name, double alatitude, double alongitude, String description, String country, String city, String address, String postalcode) {
-        this.name = name;
-        this.alatitude = alatitude;
-        this.alongitude = alongitude; 
-        this.description = description;
-        this.country = country;
-        this.city = city;
-        this.address = address;
-        this.Postalcode = postalcode;
-    
+    private String postalCode;
+
+    public void setName(String aName){
+        name=aName;
     }
-    public String getName() 
-    {
+
+    public String getName(){
         return name;
+    }   
+    public void setLatitude(Double aLatitude){
+        latitude=aLatitude;
     }
-    public void setName(String name)
-    {
-        this.name = name;
+    public Double getLatitude(){
+        return latitude;
     }
-    public double getAlatitude() 
-    {
-        return alatitude;
+    public void setLongitude(Double aLongitude){
+        longitude=aLongitude;
     }
-    public void setAlatitude(double alatitude) 
-    {
-        this.alatitude = alatitude;
+    public Double getLongitude(){
+        return longitude;
     }
-    public double getAlongitude() 
-    {
-        return alongitude;
+    public void setDescription(String aDescription){
+        description=aDescription;
     }
-    public void setAlongitude(double alongitude) 
-    {
-        this.alongitude = alongitude;
-    }
-    public String getDescription() 
-    {
+    public String getDescription(){
         return description;
     }
-    public void setDescription(String description) 
-    {
-        this.description = description;
+    public void setCountry(String aCountry){
+        country=aCountry;
     }
-    public String getCountry() 
-    {
+    public String getCountry(){
         return country;
     }
-    public void setCountry(String country) 
-    {
-        this.country = country;
+    public void setCity(String aCity){
+        city=aCity;
     }
-    public String getCity() 
-    {
+    public String getCity(){
         return city;
     }
-    public void setCity(String city) 
-    {
-        this.city = city;
+    public void setAddress(String aAddress){
+        address=aAddress;
     }
-    public String getAddress() 
-    {
+    public String getAddress(){
         return address;
     }
-    public void setAddress(String address) 
-    {
-        this.address = address;
+    public void setPostalCode(String aPostalCode){
+        postalCode=aPostalCode;
     }
-    public String getPostalcode() 
-    {
-        return Postalcode;
+    public String getPostalCode(){
+        return postalCode;
     }
-    public void setPostalcode(String postalcode) 
-    {
-        Postalcode = postalcode;
-    }
-    public boolean equals (Object obj) 
-    {
-        if(this==obj)
-        {
-            return true;
 
-        }
-        if(obj==null || getClass()!=obj.getClass())
-        {
-            return false;
-        }
-        Location location = (Location) obj;
-        return this.name.equals(location.name) &&
-               this.alatitude == location.alatitude &&
-               this.alongitude == location.alongitude &&
-               this.description.equals(location.description) &&
-               this.country.equals(location.country) &&
-               this.city.equals(location.city) &&
-               this.address.equals(location.address) &&
-               this.Postalcode.equals(location.Postalcode);
-    }  
-    
-   public void setBuilding(String[] buildings) 
-   {
+    @Override
+    public String toString() {
+        return "Location{name"+ name+
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", description=" +description +
+                ",country=" + country +
+                ", city=" + city +
+                ", address=" + address +
+                ", postalCode=" + postalCode +
+                "}";
     }
     @Override
-    public String toString() 
-    {
-      return "location{name:" + name + " latitude:" + alatitude + " longitude:" + alongitude + " description:" + description
-        + " country:" + country + " city:" + city + " address:" + address + " postalcode:" + Postalcode +
-        "}";
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Location)) return false;
+
+        Location location = (Location) o;
+
+        if (Double.compare(location.latitude, latitude) != 0) return false;
+        if (Double.compare(location.longitude, longitude) != 0) return false;
+        if (name != null ? !name.equals(location.name) : location.name != null) return false;
+        if (description != null ? !description.equals(location.description) : location.description != null)
+            return false;
+        if (country != null ? !country.equals(location.country) : location.country != null) return false;
+        if (city != null ? !city.equals(location.city) : location.city != null) return false;
+        if (address != null ? !address.equals(location.address) : location.address != null) return false;
+        return postalCode != null ? postalCode.equals(location.postalCode) : location.postalCode == null;
     }
-    
-    
-   
- 
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name != null ? name.hashCode() : 0;
+        temp = Double.doubleToLongBits(latitude);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(longitude);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (country != null ? country.hashCode() : 0);
+        result = 31 * result + (city != null ? city.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (postalCode != null ? postalCode.hashCode() : 0);
+        return result;
+    }
 }
