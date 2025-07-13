@@ -1,61 +1,52 @@
-package com.vetias.java.workshop.TempData.Beans;
+package com.vetias.java.workshop.temperaturedata.beans;
+
 import java.time.LocalDateTime;
-  
+
 public class Building {
     private String name;
     private double area;
-    private int floors;
-    private LocalDateTime openHours;
-    private LocalDateTime CloseHours;
-    
+    private  int floors;
+    private LocalDateTime opendatetime;
+    private LocalDateTime closedatetime;
+    public void setName(String aName){
+        name=aName;
 
-
-    public Building(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours) {
-        this.name = name;
-        this.area = area;
-        this.floors = floors;
-        this.openHours = openHours;
-        this.CloseHours = closeHours;
     }
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setArea(double aArea){
+        area=aArea;
+
     }
-    public double getArea() {
+    public double getArea()
+    {
         return area;
     }
-    public void setArea(double area) {
-        this.area = area;
+    public void setFloors(int aFloors){
+        floors=aFloors;
+
     }
-    public int getFloors() {
+    public int getFloors(){
         return floors;
     }
-    public void setFloors(int floors) {
-        this.floors = floors;
+    public void setOpenDateTime(LocalDateTime aOpDateTime){
+        opendatetime=aOpDateTime;
+
     }
-    public LocalDateTime getOpenHours() {
-        return openHours;
+    public LocalDateTime getaOpDateTime(){
+        return opendatetime;
     }
-    public void setOpenHours(LocalDateTime openHours) {
-        this.openHours = openHours;
+    public void setCloseDateTime(LocalDateTime aCloseDateTime){
+        closedatetime=aCloseDateTime;
+
     }
-    public LocalDateTime getCloseHours() {
-        return CloseHours;
+    public LocalDateTime getaCloseDateTime(){
+        return closedatetime;
     }
-    public void setCloseHours(LocalDateTime closeHours) {
-        CloseHours = closeHours;
-    }
-   
-    public void printDetails() {
-        System.out.println("Building Name: " + name);
-        System.out.println("Area: " + area + " sq.m");
-        System.out.println("Number of Floors: " + floors);
-        System.out.println("Open Hours: " + openHours);
-        System.out.println("Close Hours: " + CloseHours);
-    }
-    
+
+
     
     
 }
