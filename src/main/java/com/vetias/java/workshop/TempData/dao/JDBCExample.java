@@ -40,7 +40,9 @@ public class JDBCExample {
             null);
             organizationDAO.save(dbConnection, vet);
         System.out.println("Organization saved successfully!");
-        
+        organizationDAO.save(dbConnection, vet);
+        Organization myOrganization=organizationDAO.findByName(dbConnection, "VET");
+        System.out.println("Organization found: " + myOrganization);
                                     
     
 }

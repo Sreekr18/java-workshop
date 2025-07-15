@@ -22,6 +22,7 @@ public class OrganizationDAO {
                     WEBSITE VARCHAR(100),
                     EMAIL VARCHAR(100),
                     CONTACT_NUMBER VARCHAR(100),
+                    DESCRIPTION VARCHAR(255),
                     REGISTRATION_NO INT
                 )
                 """
@@ -32,14 +33,15 @@ public class OrganizationDAO {
     }
     public int save(Connection dbConnection,Organization vet){
         try(PreparedStatement preparedStatement = dbConnection.prepareStatement(
-                "INSERT INTO organization (NAME, WEBSITE, EMAIL, CONTACT_NUMBER, REGISTRATION_NO) VALUES (?, ?, ?, ?, ?)"
+                "INSERT INTO organization (NAME, WEBSITE, EMAIL, CONTACT_NUMBER, REGISTRATION_NO DESCRIPTION) VALUES (?, ?, ?, ?, ?)"
         )) {
             preparedStatement.setString(1, vet.name());
             preparedStatement.setString(2, vet.website());
             preparedStatement.setString(3, vet.email());
             preparedStatement.setString(4, vet.contactNumber());
             preparedStatement.setLong(5, vet.registrationNumber());
-            // preparedStatement.setString(6, vet.description());
+             preparedStatement.setString(6, vet.description());
+            
             return preparedStatement.executeUpdate();
         } catch (SQLException sqlException) {
             System.out.println("Error Saving Organization: " + sqlException);
