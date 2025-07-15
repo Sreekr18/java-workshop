@@ -38,7 +38,7 @@ public class OrganizationDAO {
             preparedStatement.setString(3, vet.email());
             preparedStatement.setString(4, vet.contactNumber());
             preparedStatement.setLong(5, vet.registrationNumber());
-            preparedStatement.setString(6, vet.description());
+            // preparedStatement.setString(6, vet.description());
             return preparedStatement.executeUpdate();
         } catch (SQLException sqlException) {
             System.out.println("Error Saving Organization: " + sqlException);
